@@ -1,10 +1,10 @@
 .DS_Store
 node_modules/
-dist/
-build/
-.cache/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
 
 # credentials — never in the tree; see the container CLAUDE.md
 .env
 .env.*
-*.pem

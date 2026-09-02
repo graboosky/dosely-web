@@ -17,7 +17,16 @@ entry in `../docs/divergences.md` only when a user could be confused by the diff
 ```
 dosely-web/
 ├── CLAUDE.md
-└── <TODO: fill in once the site has a shape>
+├── next.config.mjs     static export, and the basePath everything depends on
+├── package.json
+├── .github/workflows/pages.yml   builds and publishes on every push to main
+└── app/
+    ├── layout.tsx      the shell: header, footer, the two legal links
+    ├── globals.css     the app's own palette, so site and product look like one thing
+    ├── page.tsx        what Dosely is
+    ├── privacy/        the privacy policy — App Store review fetches this
+    ├── terms/          the terms of use — the paywall links to it, as Apple requires
+    └── support/        how to get help
 ```
 
 **This tree is the single source of truth for this repository's structure. When a folder is
@@ -25,15 +34,18 @@ added, removed, or renamed, update it in the same change.**
 
 ## Status
 
-Nothing is scaffolded. There is no package manifest and no dependencies installed.
+Scaffolded and building. Next.js + TypeScript, static export, published to GitHub Pages by
+`.github/workflows/pages.yml` on every push to `main`.
 
-**Stack decided:** Next.js + TypeScript, static export (`output: 'export'`), deployed to GitHub Pages
+It was written by hand rather than by `create-next-app`, which refuses a non-empty directory
+and would have had to be run beside and moved — more steps than writing six files.
 
-**First task:** initialize it, in this folder, without discarding what is already here —
-several generators refuse to run in a non-empty directory or quietly overwrite a
-`README.md`. Check before running one.
+**Why this site exists at all:** the iOS paywall must link a privacy policy and terms that
+resolve, and App Store review fetches both during submission. That is why `docs/release.md`
+puts web first in the release order, and why the deploy is automatic — a policy that only
+exists on a laptop is a policy that is not published.
 
-**Kind decided:** a static site — marketing, privacy policy and support pages. No app
+**Kind decided:** a static site — marketing, privacy policy, terms and support pages. No app
 layers; it does not log doses. If that ever changes, the six layer folders come under
 `src/` and this file's tree changes with them.
 
@@ -43,9 +55,16 @@ layers; it does not log doses. If that ever changes, the six layer folders come 
 `basePath: '/dosely-web'` — a link written without it 404s on Pages and works in `npm run
 dev`, which is exactly the kind of bug that surfaces during store review.
 
-<TODO: the exact init command (`npx create-next-app@latest . --ts …` refuses a non-empty
-folder — check its flags or init beside and move), and the Pages deploy: a workflow that
-builds `out/` on push to `main`, or the `gh-pages` branch. Record which.>
+**Two things that silently break this site, both settled:**
+
+- **`basePath`.** The site lives under `/dosely-web`, so a link written as `/privacy/`
+  works in `npm run dev` and 404s in production. Every internal link goes through
+  `process.env.NEXT_PUBLIC_BASE_PATH`, which `next.config.mjs` sets only for a production
+  build. The page most likely to be linked carelessly is the privacy policy — the one
+  App Store review fetches.
+- **`.nojekyll`.** Pages runs Jekyll by default, and Jekyll drops every path beginning with
+  an underscore — which is most of Next's output. The workflow touches the file; without
+  it the pages render unstyled and nothing says why.
 
 ## Domain
 
@@ -61,13 +80,15 @@ review cycle. `../docs/release.md` puts web first in the order for this reason.
 
 ## Build & test
 
-<TODO: fill in once the project exists.>
-
 ```bash
-# npm install
-# npm run dev
-# npm run build
+npm install
+npm run dev      # localhost:3000, no basePath — links resolve without the prefix
+npm run build    # writes out/, exactly what Pages serves
 ```
+
+**Check `out/` before trusting a change**, not the dev server: the dev server is the one
+configuration that hides the `basePath` mistake. `grep -o 'href="/dosely-web[^"]*"'
+out/index.html` shows what a visitor will actually click.
 
 ## Generated content
 
@@ -76,7 +97,9 @@ pricing, release notes — say so **on the page and here**, with the command tha
 it. A file silently overwritten by an export script is a file someone will edit by hand and
 lose.
 
-- <TODO: none yet>
+- None. Every page here is written by hand. The one thing copied from elsewhere is the
+  colour palette in `app/globals.css`, mirrored from the iOS asset catalog — it is six hex
+  values and a comment saying where they came from, not a generated file.
 
 ## Conventions
 
@@ -84,4 +107,12 @@ lose.
 - User-facing copy comes from `../docs/domain.md`. Writing a second version of a sentence
   here is how the product starts saying two different things.
 
-<TODO: formatter and its config, component boundaries, where styles live, routing scheme.>
+- **Routing is the App Router**, one folder per page, `trailingSlash: true` so Pages serves
+  `/privacy/` as a directory rather than guessing.
+- **Styles live in `app/globals.css`**, as CSS custom properties in one `:root` block with a
+  `prefers-color-scheme` override — the same two-appearance rule the app follows. No CSS
+  framework: four pages do not need one.
+- **No component layer yet.** When a second page wants the same block, it becomes a
+  component; until then a `<div className="card">` is honest.
+- **Legal pages carry their own date.** Changing the words changes the date at the top, in
+  the same edit — a policy whose date lies is worse than one that is out of date.
