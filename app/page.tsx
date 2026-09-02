@@ -21,7 +21,7 @@ export default function Home() {
       <h2>Everything stays on your iPhone</h2>
       <p>
         Dosely has no account, no analytics and no server of its own. The only thing that leaves
-        your device is the purchase, and it goes to Apple. See the{" "}
+        your device is the purchase. See the{" "}
         <a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/privacy/`}>privacy policy</a>.
       </p>
 

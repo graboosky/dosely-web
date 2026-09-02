@@ -34,15 +34,20 @@ export default function Privacy() {
 
       <h2>The one thing that leaves your device</h2>
       <p>
-        Buying Dosely, and restoring a purchase you already made, goes through the App Store.
-        Apple handles the payment and tells the app whether a purchase is active. Apple is not told
-        anything about your medications, doses or history — it is told that this app was bought.
-        What Apple does with purchase data is described in{" "}
+        Buying Dosely, and restoring a purchase you already made, goes through the App Store. Apple
+        handles the payment. What Apple does with purchase data is described in{" "}
         <a href="https://www.apple.com/legal/privacy/">Apple&rsquo;s privacy policy</a>.
       </p>
       <p>
-        There is no third-party purchase or receipt service in between. Nobody but Apple learns
-        that you bought Dosely.
+        We also use <a href="https://www.revenuecat.com/privacy/">RevenueCat</a> to keep track of
+        whether a purchase is active. That is what lets a purchase follow your Apple Account —
+        so reinstalling the app, or installing it on a second device, does not ask you to pay
+        again. RevenueCat receives an anonymous identifier and the fact that this app was bought.
+      </p>
+      <p>
+        <strong>Neither Apple nor RevenueCat is told anything about your medications, your doses,
+        your schedule or your history.</strong> None of it is ever sent anywhere. What leaves the
+        device is that a purchase happened — nothing about why you bought it.
       </p>
 
       <h2>Notifications and alarms</h2>
