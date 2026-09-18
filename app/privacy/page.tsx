@@ -4,7 +4,7 @@ export default function Privacy() {
   return (
     <main>
       <h1>Privacy Policy</h1>
-      <p className="updated">Last updated 2 September 2026</p>
+      <p className="updated">Last updated 18 September 2026</p>
 
       <p className="lede">
         Dosely keeps what you enter on your iPhone. It has no account, no analytics and no server
@@ -54,6 +54,14 @@ export default function Privacy() {
       <p>
         Alarms and refill reminders are scheduled by iOS on your device from the data already
         stored there. Nothing is sent to a push server; Dosely does not use remote notifications.
+      </p>
+
+      <h2>Your calendar</h2>
+      <p>
+        While the Care tab is open, Dosely reads your iPhone&rsquo;s calendar on the device to
+        recognise an upcoming visit with someone in your clinician book, and show when it is. This
+        happens locally and only while that tab is open — nothing from your calendar is stored or
+        sent anywhere.
       </p>
 
       <h2>Children</h2>
