@@ -1,4 +1,4 @@
-export const metadata = { title: "Terms of Use — Dosely" };
+export const metadata = { title: "Terms of Use — Pill Alarm" };
 
 export default function Terms() {
   return (
@@ -7,13 +7,13 @@ export default function Terms() {
       <p className="updated">Last updated 2 September 2026</p>
 
       <p className="lede">
-        Dosely is licensed, not sold, under Apple&rsquo;s Standard End User License Agreement.
+        Pill Alarm is licensed, not sold, under Apple&rsquo;s Standard End User License Agreement.
         The terms below say what that means in practice and what you are buying.
       </p>
 
       <h2>The licence</h2>
       <p>
-        Use of Dosely is governed by Apple&rsquo;s{" "}
+        Use of Pill Alarm is governed by Apple&rsquo;s{" "}
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">
           Standard End User License Agreement
         </a>
@@ -56,18 +56,18 @@ export default function Terms() {
         asked to pay twice.
       </p>
 
-      <h2>Dosely is not medical advice</h2>
+      <h2>Pill Alarm is not medical advice</h2>
       <p>
-        Dosely is a personal organiser. It does not diagnose, treat, advise, or calculate a dose,
+        Pill Alarm is a personal organiser. It does not diagnose, treat, advise, or calculate a dose,
         and it is not a medical device. It records what you tell it and reminds you of what you
         scheduled. <strong>Always confirm your dosing with a clinician or pharmacist.</strong> Do
-        not rely on Dosely as the only safeguard for a dose that matters clinically.
+        not rely on Pill Alarm as the only safeguard for a dose that matters clinically.
       </p>
 
       <h2>Alarms depend on the device</h2>
       <p>
-        Dosely schedules alarms with iOS. Whether one sounds depends on the device: permission,
-        battery, being switched off, or the operating system deciding otherwise. Dosely does what
+        Pill Alarm schedules alarms with iOS. Whether one sounds depends on the device: permission,
+        battery, being switched off, or the operating system deciding otherwise. Pill Alarm does what
         it can and cannot promise more than the platform does.
       </p>
 

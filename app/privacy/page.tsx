@@ -1,4 +1,4 @@
-export const metadata = { title: "Privacy Policy — Dosely" };
+export const metadata = { title: "Privacy Policy — Pill Alarm" };
 
 export default function Privacy() {
   return (
@@ -7,11 +7,11 @@ export default function Privacy() {
       <p className="updated">Last updated 18 September 2026</p>
 
       <p className="lede">
-        Dosely keeps what you enter on your iPhone. It has no account, no analytics and no server
+        Pill Alarm keeps what you enter on your iPhone. It has no account, no analytics and no server
         of its own, and it does not send your medications, doses or history anywhere.
       </p>
 
-      <h2>What Dosely stores, and where</h2>
+      <h2>What Pill Alarm stores, and where</h2>
       <p>
         Everything you type — the medications you take, their schedules, your notes, your stock
         counts and the record of what you took, skipped or missed — is written to a file inside
@@ -21,10 +21,10 @@ export default function Privacy() {
       <p>
         If you have iCloud Backup switched on for your iPhone, that backup is made by Apple under{" "}
         <a href="https://www.apple.com/legal/privacy/">Apple&rsquo;s privacy policy</a>, not by us.
-        Dosely itself does not sync anything.
+        Pill Alarm itself does not sync anything.
       </p>
 
-      <h2>What Dosely does not do</h2>
+      <h2>What Pill Alarm does not do</h2>
       <ul>
         <li>No account and no sign-in. There is nothing to register.</li>
         <li>No analytics, no crash reporting, no advertising identifier, no tracking of any kind.</li>
@@ -34,7 +34,7 @@ export default function Privacy() {
 
       <h2>The one thing that leaves your device</h2>
       <p>
-        Buying Dosely, and restoring a purchase you already made, goes through the App Store. Apple
+        Buying Pill Alarm, and restoring a purchase you already made, goes through the App Store. Apple
         handles the payment. What Apple does with purchase data is described in{" "}
         <a href="https://www.apple.com/legal/privacy/">Apple&rsquo;s privacy policy</a>.
       </p>
@@ -53,12 +53,12 @@ export default function Privacy() {
       <h2>Notifications and alarms</h2>
       <p>
         Alarms and refill reminders are scheduled by iOS on your device from the data already
-        stored there. Nothing is sent to a push server; Dosely does not use remote notifications.
+        stored there. Nothing is sent to a push server; Pill Alarm does not use remote notifications.
       </p>
 
       <h2>Your calendar</h2>
       <p>
-        While the Care tab is open, Dosely reads your iPhone&rsquo;s calendar on the device to
+        While the Care tab is open, Pill Alarm reads your iPhone&rsquo;s calendar on the device to
         recognise an upcoming visit with someone in your clinician book, and show when it is. This
         happens locally and only while that tab is open — nothing from your calendar is stored or
         sent anywhere.
@@ -66,7 +66,7 @@ export default function Privacy() {
 
       <h2>Children</h2>
       <p>
-        Dosely is not directed at children and collects nothing that would identify anyone,
+        Pill Alarm is not directed at children and collects nothing that would identify anyone,
         of any age.
       </p>
 

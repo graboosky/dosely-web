@@ -3,7 +3,7 @@ export default function Home() {
     <main>
       <h1>Take what you meant to take.</h1>
       <p className="lede">
-        Dosely is a calm place for the things you take every day — prescriptions, vitamins and
+        Pill Alarm is a calm place for the things you take every day — prescriptions, vitamins and
         supplements — and a record of whether you took them.
       </p>
 
@@ -20,14 +20,14 @@ export default function Home() {
 
       <h2>Everything stays on your iPhone</h2>
       <p>
-        Dosely has no account, no analytics and no server of its own. The only thing that leaves
+        Pill Alarm has no account, no analytics and no server of its own. The only thing that leaves
         your device is the purchase. See the{" "}
         <a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/privacy/`}>privacy policy</a>.
       </p>
 
       <h2>Not medical advice</h2>
       <p>
-        Dosely is a personal organiser, not a medical device. It does not diagnose, advise or
+        Pill Alarm is a personal organiser, not a medical device. It does not diagnose, advise or
         calculate a dose. Confirm your dosing with a clinician or pharmacist.
       </p>
     </main>

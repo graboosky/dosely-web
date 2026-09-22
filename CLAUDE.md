@@ -1,8 +1,8 @@
-# Dosely — Web
+# Pill Alarm — Web
 
-Dosely is an iOS medication tracker that logs pills, injections and other treatments, and uses AlarmKit to make sure no dose is missed.
+Pill Alarm is an iOS medication tracker that logs pills, injections and other treatments, and uses AlarmKit to make sure no dose is missed.
 
-The web platform repository of the Dosely container. `../CLAUDE.md` governs product
+The web platform repository of the Pill Alarm container. `../CLAUDE.md` governs product
 behavior, domain vocabulary, user-facing copy, and releases. This file governs how the web
 build works.
 
@@ -23,7 +23,7 @@ dosely-web/
 └── app/
     ├── layout.tsx      the shell: header, footer, the two legal links
     ├── globals.css     the app's own palette, so site and product look like one thing
-    ├── page.tsx        what Dosely is
+    ├── page.tsx        what Pill Alarm is
     ├── privacy/        the privacy policy — App Store review fetches this
     ├── terms/          the terms of use — the paywall links to it, as Apple requires
     └── support/        how to get help

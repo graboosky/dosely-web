@@ -1,4 +1,4 @@
-export const metadata = { title: "Support — Dosely" };
+export const metadata = { title: "Support — Pill Alarm" };
 
 export default function Support() {
   return (
@@ -23,11 +23,11 @@ export default function Support() {
       <h2>Things that are usually this</h2>
       <ul>
         <li>
-          <strong>No alarm rang.</strong> Check <strong>Settings › Alarms</strong> in Dosely. If it
+          <strong>No alarm rang.</strong> Check <strong>Settings › Alarms</strong> in Pill Alarm. If it
           says <em>Off</em>, iOS has not been given permission to schedule alarms.
         </li>
         <li>
-          <strong>You paid but Dosely still asks.</strong> Tap <strong>Restore purchases</strong> on
+          <strong>You paid but Pill Alarm still asks.</strong> Tap <strong>Restore purchases</strong> on
           the paywall, signed in to the Apple Account you bought with.
         </li>
         <li>
@@ -37,13 +37,13 @@ export default function Support() {
         <li>
           <strong>Cancelling the weekly plan.</strong>{" "}
           <strong>Settings › your name › Subscriptions</strong> on your device — Apple manages it,
-          not Dosely.
+          not Pill Alarm.
         </li>
       </ul>
 
       <h2>Not a clinical service</h2>
       <p>
-        Dosely does not give medical advice and cannot answer questions about your medication.
+        Pill Alarm does not give medical advice and cannot answer questions about your medication.
         Those belong with a clinician or pharmacist.
       </p>
     </main>
