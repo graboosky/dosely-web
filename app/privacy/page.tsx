@@ -4,10 +4,10 @@ export default function Privacy() {
   return (
     <main>
       <h1>Privacy Policy</h1>
-      <p className="updated">Last updated 18 September 2026</p>
+      <p className="updated">Last updated 5 October 2026</p>
 
       <p className="lede">
-        Pill Alarm keeps what you enter on your iPhone. It has no account, no analytics and no server
+        Pill Alarm keeps what you enter on your iPhone. It has no account, no tracking and no server
         of its own, and it does not send your medications, doses or history anywhere.
       </p>
 
@@ -27,12 +27,12 @@ export default function Privacy() {
       <h2>What Pill Alarm does not do</h2>
       <ul>
         <li>No account and no sign-in. There is nothing to register.</li>
-        <li>No analytics, no crash reporting, no advertising identifier, no tracking of any kind.</li>
-        <li>No advertising, and no selling or sharing of data. There is nothing to sell.</li>
-        <li>No third-party SDK that receives your data.</li>
+        <li>No analytics of how you use the app, no crash reporting, no advertising identifier, no tracking.</li>
+        <li>No ads in the app, and no selling of data. There is nothing to sell.</li>
+        <li>No third-party SDK that receives your medications, doses or history.</li>
       </ul>
 
-      <h2>The one thing that leaves your device</h2>
+      <h2>What leaves your device</h2>
       <p>
         Buying Pill Alarm, and restoring a purchase you already made, goes through the App Store. Apple
         handles the payment. What Apple does with purchase data is described in{" "}
@@ -45,9 +45,21 @@ export default function Privacy() {
         again. RevenueCat receives an anonymous identifier and the fact that this app was bought.
       </p>
       <p>
+        If you installed Pill Alarm after tapping an ad for it on the App Store, Apple can tell the
+        app which ad that was. Pill Alarm passes Apple&rsquo;s attribution token to RevenueCat, and
+        RevenueCat asks Apple for the campaign, ad group and search keyword behind the install
+        &mdash; for example, that it followed a search for &ldquo;pill reminder&rdquo;. If the
+        install did not come from an ad, Apple says so and nothing more. This is Apple&rsquo;s own
+        ad attribution: it uses no advertising identifier, combines nothing with data from other
+        companies, and is not tracking, which is why Pill Alarm never asks for permission to track
+        you. We use it to see which searches bring people who keep the app, so the ad budget goes
+        there.
+      </p>
+      <p>
         <strong>Neither Apple nor RevenueCat is told anything about your medications, your doses,
         your schedule or your history.</strong> None of it is ever sent anywhere. What leaves the
-        device is that a purchase happened — nothing about why you bought it.
+        device is that a purchase happened, and which ad &mdash; if any &mdash; led to the install.
+        Nothing about why.
       </p>
 
       <h2>Notifications and alarms</h2>
@@ -72,8 +84,8 @@ export default function Privacy() {
 
       <h2>Your data is yours</h2>
       <p>
-        Because nothing leaves your device, there is nothing for us to hand over, correct or
-        delete on your behalf. <strong>Settings › Delete all data</strong> removes every
+        Because your medications and history never leave your device, there is nothing of them
+        for us to hand over, correct or delete on your behalf. <strong>Settings › Delete all data</strong> removes every
         medication and every log entry from the iPhone, and deleting the app removes the file
         entirely.
       </p>

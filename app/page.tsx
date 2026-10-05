@@ -20,8 +20,9 @@ export default function Home() {
 
       <h2>Everything stays on your iPhone</h2>
       <p>
-        Pill Alarm has no account, no analytics and no server of its own. The only thing that leaves
-        your device is the purchase. See the{" "}
+        Pill Alarm has no account, no tracking and no server of its own. Your medications and history
+        never leave your iPhone; what does is the purchase, and which App Store ad, if any, led to
+        the install. See the{" "}
         <a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/privacy/`}>privacy policy</a>.
       </p>
 
