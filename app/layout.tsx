@@ -27,6 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span>Pill Alarm does not provide medical advice.</span>
             <a href={`${base}/privacy/`}>Privacy Policy</a>
             <a href={`${base}/terms/`}>Terms of Use</a>
+            <a href="https://fazier.com" target="_blank" rel="noopener">
+              <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width={120} alt="Fazier badge" />
+            </a>
           </footer>
         </div>
       </body>
